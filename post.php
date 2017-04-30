@@ -1,52 +1,95 @@
 <?php
 include ('header.php');
 ?>
-   <div class="container" style="margin-top:25px">
+<div class="nav-content">
+      
+    </div>
+  </nav>
+  <br><br>  
+
+  <style type="text/css">
+  #postcontent{
+          width: 90%;
+          margin-top: 5%;
+           z-index: 999;
+        }
+
+  #input2{
+      
+   border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+
+  }
+  #textarea{
+
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+
+  }
+
+  #btnsub{
+       margin-top: 2%;
+       z-index: 3;
+  }
+</style>
+
+  <div id="drugsReview" class="col s12">
+  <div class="container" style="margin-top:25px">
     <div class="row">
       <div class="col s12">
-        	<div class="card-panel grey lighten-3">
+          <div class="card-panel blue lighten-5 center">
+            <h5><b>Post your Topic</b></h5>             
+               
+         </div>
+      </div>
 
-        		<center><h5>Post your Topic</h5></center>
+    <div class="col s12">
+        <div class="card-panel ">
+          <div class="col-sm-6">
+                                      <div class="form-group ">
+                                       
+                                        <input id="input2" name="topic" type="text" placeholder="topic">
+                                 </div>
+                              </div>
+                            </div>   
+         <div class="card-panel">        
+                                      <div class="col-sm-6">
+                                      <div class="form-group blue lighten-5">
+                                        <textarea id="textarea" name="content" type="text" class="materializeextarea" placeholder="content" value="content" hight="500px" width="150px"></textarea>
+                                         <script type="text/javascript">
+                                          
+                                          CKEDITOR.replace('content');
 
-  <div class="row">
-    <form class="col s12 yellow lighten-5">
-
-    
-
-      <div class="row">
-        <div class="input-field col s12 purple lighten-4">
-          <input placeholder="Topic" id="topic" type="text" class="validate">
-          <label for="topic"></label>
-        </div>
-        <div class="input-field col s12 red lighten-5">
-          <label for="content"></label>
-	          <textarea name="content" class="materialize-textarea" placeholder="content" value="content">
-	        </textarea>
-          <script type="text/javascript">
-      
-      CKEDITOR.replace('content');
-
-    </script>
-	        
-          </div >
-          <center>
-          	 <!--a class="waves-effect blue waves-light btn " href="post.php"> Post</a> </center-->  
-               <input type='submit' class="waves-effect blue waves-light btn " name='post' value='Post' />
-               </center>
- 
-        </div>  
-          
-        <script type="text/javascript">
-          
+                                        </script>
+                                      </div>
+                                      <div class="center">
+                                      <input id="btnsub" type='submit' class="waves-effect blue waves-light btn " name='post' value='Post' />
+                                      </div>
+                                    </div>
+                                  </div>
+                                     
            
-  //$('#topic').trigger('autoresize');
-        </script>
 
-     </form>
+       </div>   
     </div>
+
+  </div>
 </div>
+
 </div>
-    </div>
+
+<?php include('footer.php'); ?>
+</div>
+
+
+   
 
 
 </body>

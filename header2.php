@@ -34,13 +34,11 @@ session_start();
         #hnav{
           position: fixed;
           margin-top: -0%;
-          z-index: 999;
         }
         #sld{
           width: 90%;
           margin-left: 5%;
            z-index: -1;
-           margin-top: 5%;
         }
 
         #tbl{
@@ -48,19 +46,11 @@ session_start();
         }
 
         #intro{
-          width: 100%;
+          width: 90%;
          margin-right: -1%;
            z-index: -1;
         }
-        #IntroContent{
-          width: 110%;
-         margin-right: -1%;
-           z-index: -1;
-        }
-
       </style>
-
-
 </head>
 <body>
 
@@ -83,6 +73,12 @@ session_start();
         <li><a href="forum.php">Forum</a></li>
         <li><a href="logout.php">Logout</a></li>
       </ul>
-    
     </div>
-   
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent">
+        <li class="tab"><a href="#discussion">Discussion</a></li>
+         <li class="tab"><a class="active" href="#drugsReview">Drugs Review</a></li>
+      </ul>
+    </div>
+    </nav>
+</br></br>  

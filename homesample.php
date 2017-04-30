@@ -1,30 +1,12 @@
 <?php
 include ('header.php');
 ?>
- <div class="nav-content">
+    <div class="nav-content">
       
     </div>
   </nav>
-  <br><br>  
- 
-
-<style type="text/css">
-  #discussion{
-          width: 90%;
-          margin-top: 10%;
-           z-index: -1;
-        }
-  #drugsReview{
-    width: 90%;
-          margin-top: 10%;
-           z-index: -1;
-  }
-
-
-
-</style>
-
-<div class="slider" id="sld">
+  <br><br>     
+  <div class="slider" id="sld">
     <ul class="slides">
       <li>
         <img src="images/slide1_1.jpg"> <!-- random image -->
@@ -54,9 +36,15 @@ include ('header.php');
     </ul>
   </div>
 
+      
 <div id="intro" class="blue lighten-5">
   <div class="container" style="margin-top:25px">
-<div class="card-panel blue lighten-5" id="IntroContent">
+
+  <div class="row">
+
+    
+
+    <div class="card-panel blue lighten-5" id="IntroContent">
       <h2>Welcome</h2>
            <p style="font-family: 'Lobster', cursive">
            Our main objective is to provide a methodology for the diabetic patients to
@@ -68,13 +56,13 @@ should follow to maintain a healthy lifestyle in addition to the medications the
 been prescribed by the doctors
           </p>
     </div>
-    </div>
-    </div>
-
-<div id="drugsReview" class="col s12">
-  
+   
+</div>    
 
 <?php include('footer.php'); ?>
+                  
+
+
 </div>
 
 
@@ -92,6 +80,12 @@ been prescribed by the doctors
 <script type="text/javascript"  src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 
 <script type="text/javascript" src="js/materialize.min.js"></script>
+
+
+
+
+ 
+
 
 </body>
 </html>

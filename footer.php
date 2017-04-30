@@ -1,4 +1,14 @@
- <footer class="page-footer blue lighten-2 waves-light">
+ <style>
+        #footer2{
+         width: 120%;
+          margin-left: 0%;
+
+           z-index: -1;
+        }
+        
+      </style>
+
+ <footer id="footer2" class="page-footer blue lighten-2 waves-light">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
