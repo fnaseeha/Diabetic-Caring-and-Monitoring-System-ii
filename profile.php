@@ -1,5 +1,10 @@
 <?php
+@session_start();
+if(@$_SESSION["username"]){
+   
 include ('header.php');
+
+
 ?>
 
 <div class="nav-content">
@@ -81,22 +86,55 @@ include ('header.php');
     <div class="row">
        <div class="col s6" id="side">
           <div id="profImg" class="card-panel blue lighten-5">
-          <center>  <img class="circle responsive-img" src="images/prof.jpg" height="150px" width="150px"></center>
+          
+<?php
+
+  require('connection.php');
+  $sql="SELECT * FROM $table WHERE username='".$_SESSION['username']."'";
+  $check =mysqli_query($con,$sql);
+  
+
+  if(mysqli_num_rows($check) !=0){
+    while($row =mysqli_fetch_assoc($check)){
+      $id=$row['id'];
+      $profile= $row['profile_pic'];
+      $email=$row['email'];
+      $address=$row['address'];
+      $phone=$row['phone'];
+ 
+    }
+}
+
+
+?>
+                <center>  <img class="circle responsive-img" src="<?php echo $profile;?>" height="150px" width="150px"></center>
+                
+             
               <div class="card-panel">
+
               <form>
                   <div id="Pateintid" class="row">
-                    <h8>Pateint ID:<b> D334</b></h8>
+                    <h8>Pateint ID:<b> <?php echo $id;?></b></h8>
                   </div>
                   <div id="eml" class="row">
-                    <h8>Email Address: <b>Perera@gmail.com</b></h8>
+                    <h8>Email Address: <b><?php echo $email;?></b></h8>
                   </div>
                    <div class="row" id="addrss">
-                     <h8>Address:<b> 3/C,Enasalgolla, Kandy</b></h8>
+                     <h8>Address:<b> <?php echo $address;?></b></h8>
                   </div>
                   <div class="row" id="phn">
-                      <h8>Phone Number:<b> +94777888845</b></h8>
+                      <h8>Phone Number:<b> (+94)<?php echo $phone;?></b></h8>
                   </div>         
              </form>
+
+                
+              <a class="waves-effect blue waves-light btn center" href="edit_profile.php"><i class="fa fa-pencil-square-o" aria-hidden="true"> <small>Edit profile</small></i></a>
+
+              
+                
+
+
+          
              </div>
          </div>
       </div>
@@ -230,4 +268,14 @@ include ('header.php');
 
 </body>
 </html>
-    
+<?php
+
+}
+
+
+
+
+
+
+
+?>    

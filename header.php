@@ -1,16 +1,3 @@
-<?php
-/*
-session_start();
-
-  echo '<h1>Welcome</h1>';
-
-  if(@$_SESSION["username"]){
-    echo "welcome ".$_SESSION['username'];
-    echo '</br> Hello Naseeha';
-
-*/
-
-?>
 
 <!DOCTYPE html>
 <html>
