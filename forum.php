@@ -96,7 +96,7 @@
 
         <style>
 
-                        .totaltxt {
+            .totaltxt {
                 position: absolute;
                 width: 80px;
                 right: 345px;
